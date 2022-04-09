@@ -1,5 +1,5 @@
 provider "linode" {
-#Access token stored locally as $ACCESS_TOKEN
+    token = ""
 }
 
 
@@ -10,7 +10,6 @@ resource "linode_instance" "math" {
     region           = "us-east"
     image            = "linode/ubuntu18.04"
     tags             = var.default_tags
-    region           = "us-east-1"
     type             = var.math_node_type
     authorized_users = var.math_authorized_users
 }
